@@ -52,6 +52,11 @@ export default {
 			title: 'Body',
 			type: 'blockContent',
 		},
+		{
+			name: 'featured',
+			title: 'Featured Post?',
+			type: 'boolean',
+		},
 	],
 
 	preview: {

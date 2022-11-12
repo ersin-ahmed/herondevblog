@@ -9,6 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
  
+  /* background-image: linear-gradient(to right top, #ec407a, #e356a0, #d16dbf, #b982d6, #a094e3, #b698e7, #cb9ce9, #dfa0ea, #ff99cb, #ffa299, #ffbf67, #fce44d); */
 }
 
 a {

@@ -20,6 +20,8 @@ interface Props {
 const Post = ({ post }: Props) => {
 	const [submitted, setSubmitted] = useState(false);
 
+	console.log(post);
+
 	const {
 		register,
 		handleSubmit,
@@ -234,7 +236,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             description,
             mainImage,
             slug,
-            body
+            body,
+			featured
         }
     `;
 

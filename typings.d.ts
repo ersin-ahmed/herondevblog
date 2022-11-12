@@ -17,6 +17,7 @@ export interface Post {
 		current: string;
 	};
 	body: [object];
+	featured: boolean;
 }
 
 export interface Comment {

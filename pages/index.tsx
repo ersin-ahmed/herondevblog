@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Banner from '../components/Banner';
+import { Footer } from '../components/Footer';
 import Header from '../components/Header';
 import { sanityClient, urlFor } from '../sanity';
 import { Post } from '../typings';
@@ -11,7 +12,7 @@ interface Props {
 
 export default function Home({ posts }: Props) {
 	return (
-		<div className='max-w-7xl mx-auto'>
+		<div className='mx-auto'>
 			<Head>
 				<title>HeronDev Blog</title>
 				<meta
@@ -23,36 +24,65 @@ export default function Home({ posts }: Props) {
 
 			<Header />
 
-			<Banner />
+			<div className='max-w-7xl mx-auto'>
+				<Banner />
 
-			{/* Posts */}
-			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
-				{posts.map((post) => (
-					<Link key={post._id} href={`/post/${post.slug.current}`}>
-						<div className='border rounded-lg group cursor-pointer overflow-hidden'>
-							<img
-								className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
-								src={urlFor(post.mainImage).url()!}
-								alt='article'
-							/>
-							<div className='flex justify-between p-5 bg-white'>
-								<div>
-									<p className='text-lg font-bold'>{post.title}</p>
-									<p className='text-xs'>
-										{post.description} by {post.author.name}
-									</p>
+				<h1 className='text-center mt-4 text-yellow-500 font-bold'>
+					Featured Posts
+				</h1>
+				<hr className='max-w-lg my-5 mx-auto border border-yellow-500' />
+
+				{/*Featured Posts */}
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
+					{/* {posts.map((post) => (
+						<Link key={post._id} href={`/post/${post.slug.current}`}>
+							<div className='border rounded-lg group cursor-pointer overflow-hidden'>
+								<img
+									className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
+									src={urlFor(post.mainImage).url()!}
+									alt='article'
+								/>
+								<div className='flex justify-between p-5 bg-white'>
+									<div>
+										<p className='text-lg font-bold'>{post.title}</p>
+										<p className='text-xs'>
+											{post.description} by {post.author.name}
+										</p>
+									</div>
 								</div>
-
-								{/* <img
-									className='h-12 w-12 rounded-full'
-									src={urlFor(post.author.image).url()!}
-									alt='author image'
-								/> */}
 							</div>
-						</div>
-					</Link>
-				))}
+						</Link>
+					))} */}
+
+					{/* Map through all the posts but display only featured posts */}
+
+					{posts.map((post) => {
+						if (post.featured) {
+							return (
+								<Link key={post._id} href={`/post/${post.slug.current}`}>
+									<div className='border rounded-lg group cursor-pointer overflow-hidden'>
+										<img
+											className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
+											src={urlFor(post.mainImage).url()!}
+											alt='article'
+										/>
+										<div className='flex justify-between p-5 bg-white'>
+											<div>
+												<p className='text-lg font-bold'>{post.title}</p>
+												<p className='text-xs'>
+													{post.description} by {post.author.name}
+												</p>
+											</div>
+										</div>
+									</div>
+								</Link>
+							);
+						}
+					})}
+				</div>
 			</div>
+
+			<Footer />
 		</div>
 	);
 }
@@ -68,7 +98,8 @@ export const getServerSideProps = async () => {
 			},
 			description,
 			mainImage,
-			slug
+			slug,
+			featured
 		}
 	`;
 
