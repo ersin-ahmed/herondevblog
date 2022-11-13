@@ -27,10 +27,10 @@ export default function Home({ posts }: Props) {
 				<h1 className='text-center mt-4 text-yellow-500 font-bold'>
 					Featured Posts
 				</h1>
-				<hr className='max-w-lg my-5 mx-auto border border-yellow-500' />
+				<hr className='max-w-lg my-5 mx-auto border border-red-300' />
 
 				{/*Featured Posts */}
-				<div className='bg-slate-200 rounded-xl border-2 border-yellow-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
+				<div className='bg-slate-200 rounded-xl border-2 border-red-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
 					{/* Map through all the posts but display only featured posts */}
 
 					{posts.map((post) => {
