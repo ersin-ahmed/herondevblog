@@ -68,7 +68,7 @@ export default function Header() {
 			</header>
 			<div>
 				<div
-					className={`bg-slate-200 flex justify-center mx-auto pb-3 mt-0 md:hidden md:block md:pb-0 md:mt-0 ${
+					className={`bg-slate-200 flex justify-center mx-auto pb-3 mt-0 md:hidden md:pb-0 md:mt-0 ${
 						navbar ? 'block' : 'hidden'
 					}`}
 				>
