@@ -9,6 +9,7 @@ export const Footer = () => {
 					href='https://herondevblog-cpkb.vercel.app/'
 					className='hover:underline'
 					target='_blank'
+					rel='noreferrer'
 				>
 					HeronDev™
 				</a>
