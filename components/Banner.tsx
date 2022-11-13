@@ -5,8 +5,8 @@ export default function Banner() {
 				<h1 className='text-6xl max-w-xl font-serif'>
 					<span className='underline decoration-black decoration-4'>
 						HeronDev
-					</span>{' '}
-					is the place to read about all things programming.
+					</span>
+					<span> </span> is the place to read about all things programming.
 				</h1>
 				<h2>
 					Feel free to browse our website to find any articles that you're
