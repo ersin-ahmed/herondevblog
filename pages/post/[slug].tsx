@@ -5,6 +5,7 @@ import { Post } from '../../typings';
 import PortableText from 'react-portable-text';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
+import Footer from '../../components/Footer';
 
 interface IFormInput {
 	_id: string;
@@ -42,7 +43,6 @@ const Post = ({ post }: Props) => {
 
 	return (
 		<>
-			<Header />
 			<main>
 				<img
 					className='w-full h-40 object-cover'
@@ -187,6 +187,7 @@ const Post = ({ post }: Props) => {
 				</div>
 				);
 			</main>
+			<Footer />
 		</>
 	);
 };

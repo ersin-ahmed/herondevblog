@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export const Footer = () => {
+export default function Footer() {
 	return (
-		<footer className='mt-28 p-4 shadow md:flex md:items-center md:justify-between md:p-6 bg-gradient-to-r from-red-300 via-red-400 to-yellow-300'>
+		<footer className=' mt-28 p-4 shadow md:flex md:items-center md:justify-between md:p-6 bg-gradient-to-r from-red-300 via-red-400 to-yellow-300'>
 			<span className='text-sm text-black sm:text-center'>
 				© 2022{' '}
 				<a
@@ -29,4 +29,4 @@ export const Footer = () => {
 			</ul>
 		</footer>
 	);
-};
+}
