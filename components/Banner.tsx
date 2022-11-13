@@ -9,7 +9,7 @@ export default function Banner() {
 					<span> </span> is the place to read about all things programming.
 				</h1>
 				<h2>
-					Feel free to browse our website to find any articles that you're
+					Feel free to browse our website to find any articles that you&apos;re
 					interested in.
 				</h2>
 			</div>
