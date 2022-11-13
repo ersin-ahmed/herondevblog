@@ -185,7 +185,6 @@ const Post = ({ post }: Props) => {
 						</div>
 					))}
 				</div>
-				);
 			</main>
 			<Footer />
 		</>

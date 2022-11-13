@@ -6,11 +6,11 @@ export default function Banner() {
 					<span className='underline decoration-black decoration-4'>
 						HeronDev
 					</span>{' '}
-					is a place to write, read and connect
+					is the place to read about all things programming.
 				</h1>
 				<h2>
-					It&aposs easy and free to post your thinking on any topic and connect
-					with millions of readers.
+					Feel free to browse our website to find any articles that you're
+					interested in.
 				</h2>
 			</div>
 
