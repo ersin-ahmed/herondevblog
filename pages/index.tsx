@@ -21,7 +21,7 @@ export default function Home({ posts }: Props) {
 				<link rel='icon' href='/images/logo-white.png' />
 			</Head>
 
-			<div className='max-w-7xl mx-auto'>
+			<div className='max-w-6xl mx-auto'>
 				<Banner />
 
 				<h1 className='text-center mt-4 text-yellow-500 font-bold'>
