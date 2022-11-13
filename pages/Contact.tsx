@@ -7,7 +7,7 @@ export default function Contact() {
 	const [message, setMessage] = useState('');
 	const [submitted, setSubmitted] = useState(false);
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		let data = {
 			name,
@@ -15,7 +15,7 @@ export default function Contact() {
 			message,
 		};
 		console.log(data);
-		fetch('/api/contact', {
+		await fetch('/api/contact', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json, text/plain, */*',
