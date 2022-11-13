@@ -3,3 +3,4 @@ node_modules
 .next
 next.config.js
 package-lock.json
+sendgrid.env

@@ -1,6 +1,30 @@
+import { useState } from 'react';
 import Footer from '../components/Footer';
 
 export default function Contact() {
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+	const [submitted, setSubmitted] = useState(false);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		let data = {
+			name,
+			email,
+			message,
+		};
+		console.log(data);
+		fetch('/api/contact', {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json, text/plain, */*',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+		});
+	};
+
 	return (
 		<>
 			<div>
@@ -25,6 +49,9 @@ export default function Contact() {
 											Name
 										</label>
 										<input
+											onChange={(e) => {
+												setName(e.target.value);
+											}}
 											type='text'
 											id='name'
 											name='name'
@@ -41,6 +68,9 @@ export default function Contact() {
 											Email
 										</label>
 										<input
+											onChange={(e) => {
+												setEmail(e.target.value);
+											}}
 											type='email'
 											id='email'
 											name='email'
@@ -57,6 +87,9 @@ export default function Contact() {
 											Message
 										</label>
 										<textarea
+											onChange={(e) => {
+												setMessage(e.target.value);
+											}}
 											id='message'
 											name='message'
 											className='w-full bg-gray-100 rounded border border-gray-300 focus:border-teal-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
@@ -64,9 +97,12 @@ export default function Contact() {
 									</div>
 								</div>
 								<div className='p-2 w-full'>
-									<button className='flex mx-auto text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded text-lg'>
-										Send
-									</button>
+									<input
+										onClick={(e) => handleSubmit(e)}
+										type='submit'
+										className='flex mx-auto cursor-pointer text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded text-lg'
+										value='Send'
+									/>
 								</div>
 								<div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
 									<a className='text-indigo-500'>ersinahmeddev@gmail.com</a>
@@ -79,9 +115,9 @@ export default function Contact() {
 										<a className='text-gray-500'>
 											<svg
 												fill='currentColor'
-												stroke-linecap='round'
-												stroke-linejoin='round'
-												stroke-width='2'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												strokeWidth='2'
 												className='w-5 h-5'
 												viewBox='0 0 24 24'
 											>
@@ -91,9 +127,9 @@ export default function Contact() {
 										<a className='ml-4 text-gray-500'>
 											<svg
 												fill='currentColor'
-												stroke-linecap='round'
-												stroke-linejoin='round'
-												stroke-width='2'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												strokeWidth='2'
 												className='w-5 h-5'
 												viewBox='0 0 24 24'
 											>
@@ -104,9 +140,9 @@ export default function Contact() {
 											<svg
 												fill='none'
 												stroke='currentColor'
-												stroke-linecap='round'
-												stroke-linejoin='round'
-												stroke-width='2'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												strokeWidth='2'
 												className='w-5 h-5'
 												viewBox='0 0 24 24'
 											>
@@ -124,9 +160,9 @@ export default function Contact() {
 										<a className='ml-4 text-gray-500'>
 											<svg
 												fill='currentColor'
-												stroke-linecap='round'
-												stroke-linejoin='round'
-												stroke-width='2'
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												strokeWidth='2'
 												className='w-5 h-5'
 												viewBox='0 0 24 24'
 											>
