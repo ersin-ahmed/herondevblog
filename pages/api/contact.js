@@ -14,15 +14,13 @@ export default async (req, res) => {
 		Message: ${body.message}
 	`;
 
-	const data = {
+	await mail.send({
 		to: TO_EMAIL,
 		from: FROM_EMAIL,
 		subject: 'New web form message!',
 		text: message,
 		html: message.replace(/\r\n/g, '<br>'),
-	};
-
-	await mail.send(data);
+	});
 
 	res.status(200).json({ status: 'Ok' });
 };
