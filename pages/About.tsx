@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 export default function About() {
 	return (
 		<>
-			<div className='shadow-xl border-red-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6'>
+			<div className='shadow-xl border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
 				<Image
 					className='rounded-3xl'
 					src='/images/author.jpg'

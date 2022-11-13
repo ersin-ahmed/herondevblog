@@ -22,13 +22,11 @@ export default function Posts({ posts }: Props) {
 			</Head>
 
 			<div className='max-w-7xl mx-auto'>
-				<h1 className='text-center mt-4 text-yellow-500 font-bold'>
-					All Posts
-				</h1>
-				<hr className='max-w-lg my-5 mx-auto border border-yellow-500' />
+				<h1 className='text-center mt-4 text-cyan-500 font-bold'>All Posts</h1>
+				<hr className='max-w-lg my-5 mx-auto border border-cyan-500' />
 
 				{/*Featured Posts */}
-				<div className='bg-slate-200 rounded-xl border-2 border-yellow-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
+				<div className='bg-cyan-100 rounded-xl border-2 border-cyan-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
 					{/* Map through all the posts but display only featured posts */}
 
 					{posts.map((post) => {
@@ -40,7 +38,7 @@ export default function Posts({ posts }: Props) {
 										src={urlFor(post.mainImage).url()!}
 										alt='article'
 									/>
-									<div className='flex justify-between p-5 bg-amber-300'>
+									<div className='flex justify-between p-5 bg-gradient-to-r from-cyan-200 to-teal-200'>
 										<div>
 											<p className='text-lg font-bold'>{post.title}</p>
 											<p className='text-xs'>

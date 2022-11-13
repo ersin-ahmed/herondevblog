@@ -5,7 +5,7 @@ export default function Header() {
 	const [navbar, setNavbar] = useState(false);
 	return (
 		<>
-			<header className='flex w-screen justify-between p-4 mx-auto bg-gradient-to-r from-red-300 via-red-400 to-yellow-300'>
+			<header className='flex w-screen justify-between p-4 mx-auto bg-gradient-to-r from-cyan-200 to-teal-200'>
 				<div className='flex items-center space-x-5'>
 					<Link href='/'>
 						<img
@@ -15,16 +15,22 @@ export default function Header() {
 						/>
 					</Link>
 				</div>
-				<div className='hidden md:inline-flex items-center space-x-5'>
-					<Link className='hover:underline' href='/About'>
+				<div className='hidden md:inline-flex items-center space-x-5 mr-2'>
+					<Link
+						className='hover:underline hover:opacity-50 text-teal-800'
+						href='/About'
+					>
 						About
 					</Link>
-					<Link className='hover:underline' href='/Contact'>
+					<Link
+						className='hover:underline hover:opacity-50 text-teal-800'
+						href='/Contact'
+					>
 						Contact
 					</Link>
 					<Link
 						href='/Posts'
-						className='text-white bg-green-600 px-4 py-1 rounded-full hover:shadow-xl'
+						className='text-white bg-teal-600 px-4 py-1 rounded-full hover:shadow-md hover:bg-cyan-500'
 					>
 						View All Posts
 					</Link>
@@ -68,25 +74,32 @@ export default function Header() {
 			</header>
 			<div>
 				<div
-					className={`bg-slate-200 flex justify-center mx-auto pb-3 mt-0 md:hidden md:pb-0 md:mt-0 ${
+					className={`bg-teal-100 flex justify-center mx-auto pb-3 mt-0 md:hidden md:pb-0 md:mt-0 ${
 						navbar ? 'block' : 'hidden'
 					}`}
 				>
 					<ul className='mt-6 items-center justify-center text-center mx-auto mb-6 space-y-8 md:flex md:space-x-6 md:space-y-0'>
-						<li className='text-yellow-600 text-3xl hover:text-yellow-500'>
-							<Link href='/'>Home</Link>
+						<li className='text-cyan-600 text-3xl hover:text-teal-500'>
+							<Link onClick={() => setNavbar(!navbar)} href='/'>
+								Home
+							</Link>
 						</li>
-						<li className='text-yellow-600 text-3xl hover:text-yellow-500'>
-							<Link href='/About'>About</Link>
+						<li className='text-cyan-600 text-3xl hover:text-teal-500'>
+							<Link onClick={() => setNavbar(!navbar)} href='/About'>
+								About
+							</Link>
 						</li>
 
-						<li className='text-yellow-600 text-3xl hover:text-yellow-500'>
-							<Link href='/Contact'>Contact</Link>
+						<li className='text-cyan-600 text-3xl hover:text-teal-500'>
+							<Link onClick={() => setNavbar(!navbar)} href='/Contact'>
+								Contact
+							</Link>
 						</li>
 						<li>
 							<Link
+								onClick={() => setNavbar(!navbar)}
 								href='/Posts'
-								className='text-white text-2xl bg-green-600 px-6 py-2 rounded-full hover:shadow-xl'
+								className='text-white text-2xl bg-teal-600 px-6 py-2 rounded-full hover:shadow-md hover:bg-cyan-500'
 							>
 								View All Posts
 							</Link>

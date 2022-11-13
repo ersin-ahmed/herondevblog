@@ -63,7 +63,7 @@ const Post = ({ post }: Props) => {
 						/>
 						<p className='font-extralight text-sm'>
 							Blog post by{' '}
-							<span className='text-green-600'>{post.author.name}</span> -
+							<span className='text-teal-500'>{post.author.name}</span> -
 							Published at {new Date(post._createdAt).toLocaleString()}
 						</p>
 					</div>
@@ -96,9 +96,9 @@ const Post = ({ post }: Props) => {
 						/>
 					</div>
 				</article>
-				<hr className='max-w-lg my-5 mx-auto border border-yellow-500' />
+				<hr className='max-w-lg my-5 mx-auto border border-cyan-500' />
 				{submitted ? (
-					<div className='flex flex-col p-10 my-10 rounded bg-yellow-500 text-white max-w-2xl mx-auto'>
+					<div className='flex flex-col p-10 my-10 rounded bg-cyan-500 text-white max-w-2xl mx-auto'>
 						<h3 className='text-3xl font-bold'>
 							Thank you for submitting your comment!
 						</h3>
@@ -109,7 +109,7 @@ const Post = ({ post }: Props) => {
 						onSubmit={handleSubmit(onSubmit)}
 						className='flex flex-col p-5 max-w-2xl mx-auto mb-10'
 					>
-						<h3 className='text-sm text-yellow-500'>Enjoyed this article?</h3>
+						<h3 className='text-sm text-cyan-500'>Enjoyed this article?</h3>
 						<h4 className='text-3xl font-bold'>Leave a comment below!</h4>
 						<hr className='py-3 mt-2' />
 
@@ -124,7 +124,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Name</span>
 							<input
 								{...register('name', { required: true })}
-								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring'
 								placeholder='Name'
 								type='text'
 							/>
@@ -133,7 +133,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Email</span>
 							<input
 								{...register('email', { required: true })}
-								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring'
 								placeholder='Name'
 								type='email'
 							/>
@@ -142,7 +142,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Comment</span>
 							<textarea
 								{...register('comment', { required: true })}
-								className='shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-yellow-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-cyan-500 outline-none focus:ring'
 								placeholder='Name'
 								rows={8}
 							/>
@@ -167,19 +167,19 @@ const Post = ({ post }: Props) => {
 
 						<input
 							type='submit'
-							className='shadow bg-yellow-500 hover:bg-yellow-400 focus:shadow-outline focush:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer'
+							className='shadow bg-cyan-500 hover:bg-teal-400 focus:shadow-outline focush:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer'
 						/>
 					</form>
 				)}
 				{/* Comment */}
-				<div className='flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2'>
+				<div className='flex flex-col p-10 my-10 max-w-2xl mx-auto bg-cyan-100 shadow-cyan-500 rounded-md shadow space-y-2'>
 					<h3 className='text-4xl'>Comments</h3>
 					<hr className='pb-2' />
 
 					{post.comments.map((comment) => (
 						<div key={comment._id}>
 							<p>
-								<span className='text-yellow-500'>{comment.name}</span>:{' '}
+								<span className='text-cyan-500'>{comment.name}</span>:{' '}
 								{comment.comment}
 							</p>
 						</div>
