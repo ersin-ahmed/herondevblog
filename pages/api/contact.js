@@ -2,9 +2,6 @@ const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const TO_EMAIL = process.env.TO_EMAIL;
-const FROM_EMAIL = process.env.FROM_EMAIL;
-
 export default async (req, res) => {
 	const body = req.body;
 
@@ -15,8 +12,8 @@ export default async (req, res) => {
 	`;
 
 	await mail.send({
-		to: TO_EMAIL,
-		from: FROM_EMAIL,
+		to: 'ersinahmeddev@gmail.com',
+		from: 'djeror33@gmail.com',
 		subject: 'New web form message!',
 		text: message,
 		html: message.replace(/\r\n/g, '<br>'),
