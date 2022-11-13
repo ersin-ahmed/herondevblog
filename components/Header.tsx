@@ -27,7 +27,7 @@ export default function Header() {
 		// 		</h3>
 		// 	</div>
 		// </header>
-		<header className='flex justify-between p-5 w-full mx-auto mb-6 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200'>
+		<header className='flex justify-between p-4 w-full mx-auto bg-gradient-to-r from-red-300 via-red-400 to-yellow-300'>
 			<div className='flex items-center space-x-5'>
 				<Link href='/'>
 					<img
