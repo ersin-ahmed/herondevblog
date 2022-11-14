@@ -5,7 +5,7 @@ export default function Contact() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
-	const [submitted, setSubmitted] = useState(false);
+	// const [submitted, setSubmitted] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
