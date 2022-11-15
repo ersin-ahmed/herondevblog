@@ -17,8 +17,8 @@ export default function Banner() {
 			</div>
 
 			<Image
-				height='600'
-				width='600'
+				height='1000'
+				width='1000'
 				className='hidden md:inline-flex md:h-24 lg:h-32 pr-4'
 				src='/images/logo-no-background.png'
 				alt='HeronDev Brand Logo'
