@@ -36,6 +36,7 @@ export default function Posts({ posts }: Props) {
 							<Link key={post._id} href={`/post/${post.slug.current}`}>
 								<div className='text-white h-96 shadow-xl border-2 bg-gradient-to-r from-cyan-700 to-teal-700 border-teal-700 rounded-lg group cursor-pointer overflow-hidden'>
 									<Image
+										unoptimized={true}
 										width='1000'
 										height='1000'
 										className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'

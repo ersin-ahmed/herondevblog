@@ -55,6 +55,7 @@ const Post = ({ post }: Props) => {
 			</Head>
 			<main>
 				<Image
+					unoptimized={true}
 					height='1000'
 					width='1000'
 					className='w-full h-40 object-cover'
@@ -70,6 +71,7 @@ const Post = ({ post }: Props) => {
 
 					<div className='flex items-center space-x-2'>
 						<Image
+							unoptimized={true}
 							height='800'
 							width='800'
 							className='h-10 w-10 rounded-full object-cover'
