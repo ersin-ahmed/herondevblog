@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -39,7 +40,9 @@ export default function Home({ posts }: Props) {
 							return (
 								<Link key={post._id} href={`/post/${post.slug.current}`}>
 									<div className='text-white h-96 border-2 bg-gradient-to-r from-teal-700 to-cyan-700 shadow-xl border-teal-700  rounded-lg group cursor-pointer overflow-hidden'>
-										<img
+										<Image
+											width='1000'
+											height='1000'
 											className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
 											src={urlFor(post.mainImage).url()!}
 											alt='article'

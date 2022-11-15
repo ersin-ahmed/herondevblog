@@ -17,8 +17,8 @@ export default function About() {
 			</Head>
 			<div className='shadow-xl bg-cyan-50 border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
 				<Image
-					className='rounded-xl'
-					src='/images/author.jpg'
+					className='rounded-full'
+					src='/images/about.jpg'
 					alt='Author Ersin Ahmed'
 					width='200'
 					height='200'
@@ -36,13 +36,12 @@ export default function About() {
 						I&apos;m a Software Developer from Burgas, Bulgaria. My technical
 						skills include: Web Development with Javascript, React and Mobile
 						Development with React Native. I&apos;ve been teaching myself how to
-						code since the year 2017 when I was still in High School. Despite
-						accumulating quite a bit of knowledge since then, I&apos;m fully
-						aware of the fact that in an ever-changing climate of Software
-						Development you must always keep learning and keep the same student
-						mentality no matter the expertise level! If you wish to learn more
-						about my abilities as a developer, please feel free to checkout my
-						portfolio site by clicking{' '}
+						code since the year 2017. Despite accumulating quite a bit of
+						knowledge since then, I&apos;m fully aware of the fact that in an
+						ever-changing climate of Software Development you must always keep
+						learning and keep the same student mentality no matter the expertise
+						level! If you wish to learn more about my abilities as a developer,
+						please feel free to checkout my portfolio site by clicking{' '}
 						<a
 							href='/'
 							target='_blank'

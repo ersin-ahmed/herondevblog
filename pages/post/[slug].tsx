@@ -6,6 +6,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
 import Footer from '../../components/Footer';
 import Head from 'next/head';
+import Image from 'next/image';
 
 interface IFormInput {
 	_id: string;
@@ -53,7 +54,9 @@ const Post = ({ post }: Props) => {
 				<link rel='icon' href='/images/logo-white.png' />
 			</Head>
 			<main>
-				<img
+				<Image
+					height='1000'
+					width='1000'
 					className='w-full h-40 object-cover'
 					src={urlFor(post.mainImage).url()!}
 					alt='post image'
@@ -66,7 +69,9 @@ const Post = ({ post }: Props) => {
 					<h2 className='text-2xl text-teal-700 my-6'>{post.description}</h2>
 
 					<div className='flex items-center space-x-2'>
-						<img
+						<Image
+							height='800'
+							width='800'
 							className='h-10 w-10 rounded-full object-cover'
 							src={urlFor(post.author.image).url()!}
 							alt='author image'
@@ -134,7 +139,7 @@ const Post = ({ post }: Props) => {
 					>
 						<h3 className='text-sm text-teal-500'>Enjoyed this article?</h3>
 						<h4 className='text-3xl font-bold'>Leave a comment below!</h4>
-						<hr className='py-3 mt-2' />
+						<hr className='max-w-5xl my-5 mx-auto border border-teal-500' />
 
 						<input
 							{...register('_id')}
@@ -195,9 +200,9 @@ const Post = ({ post }: Props) => {
 					</form>
 				)}
 				{/* Comment */}
-				<div className='flex flex-col p-10 my-10 max-w-2xl mx-auto bg-cyan-100 shadow-cyan-500 rounded-md shadow space-y-2'>
-					<h3 className='text-4xl'>Comments</h3>
-					<hr className='pb-2' />
+				<div className='flex flex-col p-10 my-10 max-w-2xl border-cyan-100 border-2 mx-auto bg-cyan-100 shadow-cyan-500 rounded-md shadow space-y-2'>
+					<h3 className='text-3xl text-teal-700 pb-4'>Comments</h3>
+					<hr className='max-w-6xl mx-8 border border-teal-500' />
 
 					{post.comments.map((comment) => (
 						<div key={comment._id}>
