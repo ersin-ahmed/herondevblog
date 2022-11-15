@@ -36,6 +36,7 @@ export default function About() {
 						<a
 							href='/'
 							target='_blank'
+							rel='noreferrer'
 							className='text-cyan-600 hover:underline hover:text-teal-400'
 						>
 							here
@@ -44,6 +45,7 @@ export default function About() {
 						<a
 							href='https://github.com/ersin-ahmed'
 							target='_blank'
+							rel='noreferrer'
 							className='text-cyan-600 hover:underline hover:text-teal-400'
 						>
 							here
@@ -52,6 +54,7 @@ export default function About() {
 						<a
 							href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
 							target='_blank'
+							rel='noreferrer'
 							className='text-cyan-600 hover:underline hover:text-teal-400'
 						>
 							here

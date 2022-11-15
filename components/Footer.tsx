@@ -18,7 +18,11 @@ export default function Footer() {
 
 			<ul className='flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0'>
 				<span className='flex justify-center align-middle items-center mr-4'>
-					<a href='https://github.com/ersin-ahmed' target='_blank'>
+					<a
+						href='https://github.com/ersin-ahmed'
+						target='_blank'
+						ref='noreferrer'
+					>
 						<svg
 							aria-hidden='true'
 							className='octicon octicon-mark-github'
@@ -37,6 +41,7 @@ export default function Footer() {
 					<a
 						href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
 						target='_blank'
+						ref='noreferrer'
 					>
 						<svg
 							width='40px'

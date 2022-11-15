@@ -121,7 +121,11 @@ export default function Contact() {
 										Bulgaria
 									</p>
 									<span className='inline-flex items-center'>
-										<a href='https://github.com/ersin-ahmed' target='_blank'>
+										<a
+											href='https://github.com/ersin-ahmed'
+											target='_blank'
+											ref='noreferrer'
+										>
 											<svg
 												aria-hidden='true'
 												className='octicon octicon-mark-github'
@@ -139,6 +143,7 @@ export default function Contact() {
 										<a
 											href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
 											target='_blank'
+											ref='noreferrer'
 										>
 											<svg
 												width='48px'
