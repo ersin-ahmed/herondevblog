@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Banner() {
 	return (
 		<div className='flex justify-between items-center shadow-md bg-teal-100 border-y border-black py-16'>
@@ -14,9 +16,11 @@ export default function Banner() {
 				</h2>
 			</div>
 
-			<img
+			<Image
+				height='600'
+				width='600'
 				className='hidden md:inline-flex md:h-24 lg:h-32 pr-4'
-				src='images/logo-no-background.png'
+				src='/images/logo-no-background.png'
 				alt='HeronDev Brand Logo'
 			/>
 		</div>

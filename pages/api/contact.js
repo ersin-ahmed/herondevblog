@@ -2,6 +2,7 @@ const mail = require('@sendgrid/mail');
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
 	const body = req.body;
 
