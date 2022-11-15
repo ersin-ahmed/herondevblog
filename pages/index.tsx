@@ -38,17 +38,20 @@ export default function Home({ posts }: Props) {
 						if (post.featured) {
 							return (
 								<Link key={post._id} href={`/post/${post.slug.current}`}>
-									<div className='text-white border-2 shadow-xl border-teal-700  rounded-lg group cursor-pointer overflow-hidden'>
+									<div className='text-white h-96 border-2 bg-gradient-to-r from-teal-700 to-cyan-700 shadow-xl border-teal-700  rounded-lg group cursor-pointer overflow-hidden'>
 										<img
 											className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
 											src={urlFor(post.mainImage).url()!}
 											alt='article'
 										/>
-										<div className='flex justify-between p-5 bg-gradient-to-r from-teal-700 to-cyan-700'>
+										<div className='flex justify-between p-5 '>
 											<div>
 												<p className='text-lg font-bold'>{post.title}</p>
 												<p className='text-xs'>
-													{post.description} by {post.author.name}
+													{post.description}. <br /> Article by{' '}
+													<span className='text-teal-200'>
+														{post.author.name}
+													</span>
 												</p>
 											</div>
 										</div>

@@ -33,17 +33,20 @@ export default function Posts({ posts }: Props) {
 					{posts.map((post) => {
 						return (
 							<Link key={post._id} href={`/post/${post.slug.current}`}>
-								<div className='text-white shadow-xl border-2 border-teal-700 rounded-lg group cursor-pointer overflow-hidden'>
+								<div className='text-white h-96 shadow-xl border-2 bg-gradient-to-r from-cyan-700 to-teal-700 border-teal-700 rounded-lg group cursor-pointer overflow-hidden'>
 									<img
 										className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
 										src={urlFor(post.mainImage).url()!}
 										alt='article'
 									/>
-									<div className='flex justify-between p-5 bg-gradient-to-r from-cyan-700 to-teal-700'>
+									<div className='flex justify-between p-5 '>
 										<div>
 											<p className='text-lg font-bold'>{post.title}</p>
-											<p className='text-xs'>
-												{post.description} by {post.author.name}
+											<p className='text-xs pt-2'>
+												{post.description}.
+												<span className='text-teal-200'>
+													<br /> Article by {post.author.name}
+												</span>
 											</p>
 										</div>
 									</div>
