@@ -60,7 +60,7 @@ export default function About() {
 							here
 						</a>
 						. Alternatively you can click the icons shown in the footer section
-						of the website below to visit my socials. You can also connect with
+						below of the website to visit my socials. You can also connect with
 						me by visiting the{' '}
 						<Link
 							href='/Contact'

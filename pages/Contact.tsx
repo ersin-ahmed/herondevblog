@@ -124,7 +124,7 @@ export default function Contact() {
 										<a
 											href='https://github.com/ersin-ahmed'
 											target='_blank'
-											ref='noreferrer'
+											rel='noreferrer'
 										>
 											<svg
 												aria-hidden='true'
@@ -143,7 +143,7 @@ export default function Contact() {
 										<a
 											href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
 											target='_blank'
-											ref='noreferrer'
+											rel='noreferrer'
 										>
 											<svg
 												width='48px'
