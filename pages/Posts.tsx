@@ -22,23 +22,23 @@ export default function Posts({ posts }: Props) {
 			</Head>
 
 			<div className='max-w-7xl mx-auto'>
-				<h1 className='text-center mt-4 text-cyan-500 font-bold'>All Posts</h1>
-				<hr className='max-w-lg my-5 mx-auto border border-cyan-500' />
+				<h1 className='text-center mt-4 text-teal-500 font-bold'>All Posts</h1>
+				<hr className='max-w-lg my-5 mx-auto border border-teal-500' />
 
 				{/*Featured Posts */}
-				<div className='bg-cyan-100 rounded-xl border-2 border-cyan-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
+				<div className='bg-cyan-100 rounded-xl border-2 border-cyan-100 shadow-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6'>
 					{/* Map through all the posts but display only featured posts */}
 
 					{posts.map((post) => {
 						return (
 							<Link key={post._id} href={`/post/${post.slug.current}`}>
-								<div className='border rounded-lg group cursor-pointer overflow-hidden'>
+								<div className='text-white shadow-xl border-2 border-teal-700 rounded-lg group cursor-pointer overflow-hidden'>
 									<img
 										className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
 										src={urlFor(post.mainImage).url()!}
 										alt='article'
 									/>
-									<div className='flex justify-between p-5 bg-gradient-to-r from-cyan-200 to-teal-200'>
+									<div className='flex justify-between p-5 bg-gradient-to-r from-cyan-700 to-teal-700'>
 										<div>
 											<p className='text-lg font-bold'>{post.title}</p>
 											<p className='text-xs'>

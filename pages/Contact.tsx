@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '../components/Footer';
 
@@ -5,7 +6,6 @@ export default function Contact() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
-	// const [submitted, setSubmitted] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -39,7 +39,7 @@ export default function Contact() {
 							</p>
 						</div>
 						<div className='lg:w-1/2 md:w-2/3 mx-auto'>
-							<div className='flex flex-wrap -m-2'>
+							<form className='flex flex-wrap -m-2'>
 								<div className='p-2 w-1/2'>
 									<div className='relative'>
 										<label
@@ -55,6 +55,7 @@ export default function Contact() {
 											type='text'
 											id='name'
 											name='name'
+											required
 											className='w-full bg-gray-100 rounded border border-gray-300 focus:border-teal-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
 										/>
 									</div>
@@ -74,6 +75,7 @@ export default function Contact() {
 											type='email'
 											id='email'
 											name='email'
+											required
 											className='w-full bg-gray-100 rounded border border-gray-300 focus:border-teal-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
 										/>
 									</div>
@@ -92,86 +94,78 @@ export default function Contact() {
 											}}
 											id='message'
 											name='message'
+											required
 											className='w-full bg-gray-100 rounded border border-gray-300 focus:border-teal-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
 										></textarea>
 									</div>
 								</div>
 								<div className='p-2 w-full'>
-									<input
-										onClick={(e) => handleSubmit(e)}
-										type='submit'
-										className='flex mx-auto cursor-pointer text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded text-lg'
-										value='Send'
-									/>
+									{name === '' || email === '' || message === '' ? (
+										<button className='flex mx-auto cursor-not-allowed text-white focus:outline-none bg-red-400 border-0 py-2 px-8 rounded text-lg'>
+											Please fill out the form!
+										</button>
+									) : (
+										<input
+											onClick={(e) => handleSubmit(e)}
+											type='submit'
+											className='flex mx-auto cursor-pointer text-white bg-teal-600 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded text-lg'
+											value='Send'
+										/>
+									)}
 								</div>
 								<div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
-									<a className='text-indigo-500'>ersinahmeddev@gmail.com</a>
+									<a className='text-cyan-600'>ersinahmeddev@gmail.com</a>
 									<p className='leading-normal my-5'>
 										Burgas 8000
 										<br />
 										Bulgaria
 									</p>
-									<span className='inline-flex'>
-										<a className='text-gray-500'>
+									<span className='inline-flex items-center'>
+										<a href='https://github.com/ersin-ahmed' target='_blank'>
 											<svg
-												fill='currentColor'
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												strokeWidth='2'
-												className='w-5 h-5'
-												viewBox='0 0 24 24'
+												aria-hidden='true'
+												className='octicon octicon-mark-github'
+												height='32px'
+												version='1.1'
+												viewBox='0 0 16 16'
+												width='32px'
 											>
-												<path d='M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z'></path>
+												<path
+													fillRule='evenodd'
+													d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z'
+												></path>
 											</svg>
 										</a>
-										<a className='ml-4 text-gray-500'>
+										<a
+											href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
+											target='_blank'
+										>
 											<svg
-												fill='currentColor'
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												strokeWidth='2'
-												className='w-5 h-5'
-												viewBox='0 0 24 24'
+												width='48px'
+												height='48px'
+												viewBox='0 0 48 48'
+												version='1.1'
+												xmlns='http://www.w3.org/2000/svg'
 											>
-												<path d='M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z'></path>
-											</svg>
-										</a>
-										<a className='ml-4 text-gray-500'>
-											<svg
-												fill='none'
-												stroke='currentColor'
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												strokeWidth='2'
-												className='w-5 h-5'
-												viewBox='0 0 24 24'
-											>
-												<rect
-													width='20'
-													height='20'
-													x='2'
-													y='2'
-													rx='5'
-													ry='5'
-												></rect>
-												<path d='M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01'></path>
-											</svg>
-										</a>
-										<a className='ml-4 text-gray-500'>
-											<svg
-												fill='currentColor'
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												strokeWidth='2'
-												className='w-5 h-5'
-												viewBox='0 0 24 24'
-											>
-												<path d='M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z'></path>
+												<title>Linkedin</title>
+												<g
+													id='Icon/Social/linkedin-color'
+													stroke='none'
+													strokeWidth='1'
+													fill='none'
+													fillRule='evenodd'
+												>
+													<path
+														d='M20.9716667,33.5527338 L25.001,33.5527338 L25.001,27.1328007 C25.001,25.439485 25.3213333,23.7988354 27.4206667,23.7988354 C29.491,23.7988354 29.517,25.7351486 29.517,27.2404662 L29.517,33.5527338 L33.5506667,33.5527338 L33.5506667,26.4341413 C33.5506667,22.9381777 32.796,20.2505391 28.711,20.2505391 C26.7483333,20.2505391 25.432,21.3265278 24.8943333,22.3471839 L24.839,22.3471839 L24.839,20.5725357 L20.9716667,20.5725357 L20.9716667,33.5527338 Z M16.423,14.1202696 C15.1273333,14.1202696 14.0823333,15.1682587 14.0823333,16.4595785 C14.0823333,17.7508984 15.1273333,18.7992208 16.423,18.7992208 C17.7133333,18.7992208 18.761,17.7508984 18.761,16.4595785 C18.761,15.1682587 17.7133333,14.1202696 16.423,14.1202696 L16.423,14.1202696 Z M14.4026667,33.5527338 L18.4406667,33.5527338 L18.4406667,20.5725357 L14.4026667,20.5725357 L14.4026667,33.5527338 Z M9.76633333,40 C8.79033333,40 8,39.2090082 8,38.2336851 L8,9.76631493 C8,8.79065843 8.79033333,8 9.76633333,8 L38.234,8 C39.2093333,8 40,8.79065843 40,9.76631493 L40,38.2336851 C40,39.2090082 39.2093333,40 38.234,40 L9.76633333,40 Z'
+														id='Shape'
+														fill='#000000'
+													></path>
+												</g>
 											</svg>
 										</a>
 									</span>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</section>

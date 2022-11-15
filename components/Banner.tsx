@@ -1,6 +1,6 @@
 export default function Banner() {
 	return (
-		<div className='flex justify-between items-center bg-cyan-200 border-y border-black py-10'>
+		<div className='flex justify-between items-center shadow-md bg-teal-100 border-y border-black py-16'>
 			<div className='px-10 space-y-5'>
 				<h1 className='text-4xl max-w-xl font-serif'>
 					<span className='underline decoration-black decoration-4'>

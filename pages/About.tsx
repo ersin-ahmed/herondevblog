@@ -1,12 +1,13 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '../components/Footer';
 
 export default function About() {
 	return (
 		<>
-			<div className='shadow-xl border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
+			<div className='shadow-xl bg-cyan-50 border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
 				<Image
-					className='rounded-3xl'
+					className='rounded-xl'
 					src='/images/author.jpg'
 					alt='Author Ersin Ahmed'
 					width='200'
@@ -17,32 +18,59 @@ export default function About() {
 				</h1>
 				<div>
 					<h2 className='text-2xl font-semibold mb-6'>Welcome to my Blog.</h2>
-					<p className='text-xl font-medium text-left px-8'>
-						I am a Web Developer from Burgas, Bulgaria. My journey into the
-						world of programming began when I was still in High School back in
-						2017. The first programming language I ever tried to learn was Java.
-						At the time I wasn&apos;t aware that perhaps Java wasn&apos;t the
-						best choice for a beginner to learn, but I did manage to build a
-						simple Android app with it. It was a bottle flipping game, nothing
-						complicated, just a picture of a bottle that spun around when you
-						clicked it and it landed on a random direction. But as simple as
-						that app was, It made me realise the power of Software Engineering
-						through code and all the posibilities that it offered simply
-						fascinated me! As I dwelled deeper into programming I switched to
-						learning more about Web Development in general as I was struggling
-						to learn Java given that it was quite overwhelming for a beginner
-						like me at the time. Naturally I switched to learning Javascript and
-						some frameworks that go with it like React, Next, Express and Node.
-						I didn&apos;t however take my learning seriously until I graduated
-						from High School in 2019 and ever since then I&apos;ve been slowly
-						but surely developing my skills as a self-taugh Web Developer.
-						Please feel free to check my portfolio site for a display of my
-						skills as a Developer. Otherwise you can check my GitHub page as
-						well. If you wished to connect with me feel free to send me an email
-						@ersinahmeddev@gmail.com or message me on LinkedIn.
+					<hr className='max-w-lg my-5 mx-auto border border-teal-600' />
+					<p className='text-left text-teal-600 font-medium pb-2 px-8'>
+						About Me:
+					</p>
+					<p className='text-xl font-medium text-left px-12'>
+						I&apos;m a Software Developer from Burgas, Bulgaria. My technical
+						skills include: Web Development with Javascript, React and Mobile
+						Development with React Native. I&apos;ve been teaching myself how to
+						code since the year 2017 when I was still in High School. Despite
+						accumulating quite a bit of knowledge since then, I&apos;m fully
+						aware of the fact that in an ever-changing climate of Software
+						Development you must always keep learning and keep the same student
+						mentality no matter the expertise level! If you wish to learn more
+						about my abilities as a developer, please feel free to checkout my
+						portfolio site by clicking{' '}
+						<a
+							href='/'
+							target='_blank'
+							className='text-cyan-600 hover:underline hover:text-teal-400'
+						>
+							here
+						</a>
+						. Likewise my GitHub page is linked{' '}
+						<a
+							href='https://github.com/ersin-ahmed'
+							target='_blank'
+							className='text-cyan-600 hover:underline hover:text-teal-400'
+						>
+							here
+						</a>{' '}
+						and my LinkedIn page is linked{' '}
+						<a
+							href='https://www.linkedin.com/in/ersin-ahmed-54702b203/'
+							target='_blank'
+							className='text-cyan-600 hover:underline hover:text-teal-400'
+						>
+							here
+						</a>
+						. Alternatively you can click the icons shown in the footer section
+						of the website below to visit my socials. You can also connect with
+						me by visiting the{' '}
+						<Link
+							href='/Contact'
+							className='text-cyan-600 hover:underline hover:text-teal-400'
+						>
+							Contact page
+						</Link>{' '}
+						of this site to send me a message with your name and email. Thank
+						you for visiting my Blog!
 					</p>
 				</div>
 			</div>
+
 			<Footer />
 		</>
 	);
