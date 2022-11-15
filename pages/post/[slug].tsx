@@ -1,11 +1,11 @@
 import { GetStaticProps } from 'next';
-import Header from '../../components/Header';
 import { sanityClient, urlFor } from '../../sanity';
 import { Post } from '../../typings';
 import PortableText from 'react-portable-text';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
 import Footer from '../../components/Footer';
+import Head from 'next/head';
 
 interface IFormInput {
 	_id: string;
@@ -43,15 +43,27 @@ const Post = ({ post }: Props) => {
 
 	return (
 		<>
+			<Head>
+				<title>{post.title}</title>
+				<meta
+					name='description'
+					content={`${post.title} by ${post.author.name}. ${post.description}`}
+					key='desc'
+				/>
+				<link rel='icon' href='/images/logo-white.png' />
+			</Head>
 			<main>
 				<img
 					className='w-full h-40 object-cover'
 					src={urlFor(post.mainImage).url()!}
 					alt='post image'
 				/>
-				<article className='max-w-3xl mx-auto p-5'>
-					<h1 className='text-3xl mt-10 mb-3'>{post.title}</h1>
-					<h2 className='text-xl font-light text-gray-500 mb-2'>
+				<article className='max-w-5xl mx-auto sm:p-5 p-2'>
+					<h1 className='text-3xl font-medium text-teal-900 mt-10 mb-3'>
+						{post.title}
+					</h1>
+					<hr className='max-w-5xl my-5 mx-auto border border-teal-500' />
+					<h2 className='text-xl font-light text-teal-600 my-4'>
 						{post.description}
 					</h2>
 
@@ -68,7 +80,7 @@ const Post = ({ post }: Props) => {
 						</p>
 					</div>
 
-					<div className='mt-10'>
+					<div className='mt-10 border-2 border-cyan-100 bg-cyan-100 rounded-md p-3'>
 						<PortableText
 							className=''
 							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -96,7 +108,7 @@ const Post = ({ post }: Props) => {
 						/>
 					</div>
 				</article>
-				<hr className='max-w-lg my-5 mx-auto border border-cyan-500' />
+				<hr className='max-w-lg my-5 mx-auto border border-teal-500' />
 				{submitted ? (
 					<div className='flex flex-col p-10 my-10 rounded bg-cyan-500 text-white max-w-2xl mx-auto'>
 						<h3 className='text-3xl font-bold'>
@@ -109,7 +121,7 @@ const Post = ({ post }: Props) => {
 						onSubmit={handleSubmit(onSubmit)}
 						className='flex flex-col p-5 max-w-2xl mx-auto mb-10'
 					>
-						<h3 className='text-sm text-cyan-500'>Enjoyed this article?</h3>
+						<h3 className='text-sm text-teal-500'>Enjoyed this article?</h3>
 						<h4 className='text-3xl font-bold'>Leave a comment below!</h4>
 						<hr className='py-3 mt-2' />
 
@@ -124,7 +136,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Name</span>
 							<input
 								{...register('name', { required: true })}
-								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-teal-500 outline-none focus:ring'
 								placeholder='Name'
 								type='text'
 							/>
@@ -133,7 +145,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Email</span>
 							<input
 								{...register('email', { required: true })}
-								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-cyan-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-teal-500 outline-none focus:ring'
 								placeholder='Name'
 								type='email'
 							/>
@@ -142,7 +154,7 @@ const Post = ({ post }: Props) => {
 							<span className='text-gray-700'>Comment</span>
 							<textarea
 								{...register('comment', { required: true })}
-								className='shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-cyan-500 outline-none focus:ring'
+								className='shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-teal-500 outline-none focus:ring'
 								placeholder='Name'
 								rows={8}
 							/>
@@ -179,7 +191,7 @@ const Post = ({ post }: Props) => {
 					{post.comments.map((comment) => (
 						<div key={comment._id}>
 							<p>
-								<span className='text-cyan-500'>{comment.name}</span>:{' '}
+								<span className='text-teal-500'>{comment.name}</span>:{' '}
 								{comment.comment}
 							</p>
 						</div>

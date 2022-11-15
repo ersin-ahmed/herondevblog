@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../components/Footer';
@@ -5,6 +6,15 @@ import Footer from '../components/Footer';
 export default function About() {
 	return (
 		<>
+			<Head>
+				<title>About</title>
+				<meta
+					name='description'
+					content='Read more about the Founder / Creator of this blog Ersin Ahmed.'
+					key='desc'
+				/>
+				<link rel='icon' href='/images/logo-white.png' />
+			</Head>
 			<div className='shadow-xl bg-cyan-50 border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
 				<Image
 					className='rounded-xl'

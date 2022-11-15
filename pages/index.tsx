@@ -17,6 +17,7 @@ export default function Home({ posts }: Props) {
 				<meta
 					name='description'
 					content='A Blog about Programming, Web Development and many other topics regarding Software Development and Engineering. Founded by Ersin Ahmed.'
+					key='desc'
 				/>
 				<link rel='icon' href='/images/logo-white.png' />
 			</Head>

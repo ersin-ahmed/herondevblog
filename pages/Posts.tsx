@@ -13,10 +13,11 @@ export default function Posts({ posts }: Props) {
 	return (
 		<div className='mx-auto flex flex-col justify-between h-screen'>
 			<Head>
-				<title>HeronDev Blog</title>
+				<title>All Posts</title>
 				<meta
 					name='description'
-					content='A Blog about Programming, Web Development and many other topics regarding Software Development and Engineering. Founded by Ersin Ahmed.'
+					content='View all the Blog Posts and Articles available to you by HeronDev.'
+					key='desc'
 				/>
 				<link rel='icon' href='/images/logo-white.png' />
 			</Head>

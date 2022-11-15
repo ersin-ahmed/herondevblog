@@ -1,11 +1,12 @@
-import Link from 'next/link';
 import { useState } from 'react';
+import Head from 'next/head';
 import Footer from '../components/Footer';
 
 export default function Contact() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+	const [submitted, setSubmitted] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -14,7 +15,7 @@ export default function Contact() {
 			email,
 			message,
 		};
-		console.log(data);
+		setSubmitted(true);
 		await fetch('/api/contact', {
 			method: 'POST',
 			headers: {
@@ -27,6 +28,15 @@ export default function Contact() {
 
 	return (
 		<>
+			<Head>
+				<title>Contact Us</title>
+				<meta
+					name='description'
+					content='Fill out the form with your name and email with the message you want to send.'
+					key='desc'
+				/>
+				<link rel='icon' href='/images/logo-white.png' />
+			</Head>
 			<div>
 				<section className='text-gray-700 body-font relative'>
 					<div className='container px-5 py-24 mx-auto'>
@@ -111,6 +121,11 @@ export default function Contact() {
 											className='flex mx-auto cursor-pointer text-white bg-teal-600 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded text-lg'
 											value='Send'
 										/>
+									)}
+									{submitted && (
+										<h1 className='text-center pt-6 text-teal-600 animate-pulse'>
+											Message Sent!
+										</h1>
 									)}
 								</div>
 								<div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
