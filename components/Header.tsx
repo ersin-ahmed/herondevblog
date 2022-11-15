@@ -18,6 +18,12 @@ export default function Header() {
 				<div className='hidden md:inline-flex items-center space-x-5 mr-2'>
 					<Link
 						className='hover:underline hover:opacity-50 text-white'
+						href='/'
+					>
+						Home
+					</Link>
+					<Link
+						className='hover:underline hover:opacity-50 text-white'
 						href='/About'
 					>
 						About
@@ -90,7 +96,7 @@ export default function Header() {
 							</Link>
 						</li>
 
-						<li className='text-white text-3xl hover:text-teal-500'>
+						<li className='text-white pb-2 text-3xl hover:text-teal-500'>
 							<Link onClick={() => setNavbar(!navbar)} href='/Contact'>
 								Contact
 							</Link>

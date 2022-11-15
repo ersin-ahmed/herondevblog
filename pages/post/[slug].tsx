@@ -58,14 +58,12 @@ const Post = ({ post }: Props) => {
 					src={urlFor(post.mainImage).url()!}
 					alt='post image'
 				/>
-				<article className='max-w-5xl mx-auto sm:p-5 p-2'>
-					<h1 className='text-3xl font-medium text-teal-900 mt-10 mb-3'>
+				<article className='max-w-7xl mx-auto sm:p-5 p-2'>
+					<h1 className='text-3xl font-medium text-teal-900 mt-12 mb-12'>
 						{post.title}
 					</h1>
 					<hr className='max-w-5xl my-5 mx-auto border border-teal-500' />
-					<h2 className='text-xl font-light text-teal-600 my-4'>
-						{post.description}
-					</h2>
+					<h2 className='text-2xl text-teal-700 my-6'>{post.description}</h2>
 
 					<div className='flex items-center space-x-2'>
 						<img
@@ -80,7 +78,7 @@ const Post = ({ post }: Props) => {
 						</p>
 					</div>
 
-					<div className='mt-10 border-2 border-cyan-100 bg-cyan-100 rounded-md p-3'>
+					<div className='mt-10 border-2 border-cyan-100 bg-cyan-100 rounded-md p-4 md:px-16'>
 						<PortableText
 							className=''
 							dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -88,13 +86,26 @@ const Post = ({ post }: Props) => {
 							content={post.body}
 							serializers={{
 								h1: (props: any) => (
-									<h1 className='text-2xl font-bold my-5' {...props} />
+									<h1 className='text-2xl font-bold my-6' {...props} />
 								),
 								h2: (props: any) => (
-									<h1 className='text-xl font-bold my-5' {...props} />
+									<h1 className='text-xl font-bold my-6' {...props} />
+								),
+								h3: (props: any) => (
+									<h1 className='text-xl font-normal my-8' {...props} />
+								),
+								h4: (props: any) => (
+									<h1 className='text-lg font-semibold my-6' {...props} />
+								),
+								p: ({ children }: any) => (
+									<p className='text-2xl text-cyan-400 font-bold my-5'>
+										{children}
+									</p>
 								),
 								li: ({ children }: any) => (
-									<li className='ml-4 list-disc'>{children}</li>
+									<li className='ml-4 list-disc font-medium text-2xl'>
+										{children}
+									</li>
 								),
 								link: ({ href, children }: any) => (
 									<a
