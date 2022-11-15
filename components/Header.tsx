@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -8,7 +9,9 @@ export default function Header() {
 			<header className='flex w-screen justify-between p-4 mx-auto bg-gradient-to-r from-cyan-600 to-teal-600 shadow-md'>
 				<div className='flex items-center space-x-5'>
 					<Link href='/'>
-						<img
+						<Image
+							width='200'
+							height='200'
 							className='w-44 object-contain cursor-pointer'
 							src='/images/logo-white-nobg.png'
 							alt='HeronDev Logo'
