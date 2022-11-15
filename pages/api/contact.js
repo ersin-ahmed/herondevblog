@@ -13,7 +13,7 @@ export default async (req, res) => {
 
 	await mail.send({
 		to: 'ersinahmeddev@gmail.com',
-		from: 'djeror33@gmail.com',
+		from: 'herondevblogdummy@gmail.com',
 		subject: 'New web form message!',
 		text: message,
 		html: message.replace(/\r\n/g, '<br>'),
