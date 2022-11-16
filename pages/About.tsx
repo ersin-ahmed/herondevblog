@@ -34,14 +34,14 @@ export default function About() {
 					</p>
 					<p className='text-xl font-medium text-left px-12'>
 						I&apos;m a Software Developer from Burgas, Bulgaria. My technical
-						skills include: Web Development with Javascript, React and Mobile
-						Development with React Native. I&apos;ve been teaching myself how to
-						code since the year 2017. Despite accumulating quite a bit of
-						knowledge since then, I&apos;m fully aware of the fact that in an
-						ever-changing climate of Software Development you must always keep
-						learning and keep the same student mentality no matter the expertise
-						level! If you wish to learn more about my abilities as a developer,
-						please feel free to checkout my portfolio site by clicking{' '}
+						skills include: Web Development with Javascript and React. I&apos;ve
+						been teaching myself how to code since the year 2017. Despite
+						accumulating quite a bit of knowledge since then, I&apos;m fully
+						aware of the fact that in an ever-changing climate of Software
+						Development you must always keep learning and keep the same student
+						mentality no matter the expertise level! If you wish to learn more
+						about my abilities as a developer, please feel free to checkout my
+						portfolio site by clicking{' '}
 						<a
 							href='/'
 							target='_blank'
