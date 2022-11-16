@@ -20,6 +20,9 @@ This page contains information about the owner/founder of this site (me).
 Contact Page:
 This page includes a Form for sending messages to the owner of the site. It uses SendGrip API to handle sending the message as an Email to the reciever.
 
+Layout:
+There's a layout file that includes the Navbar and the Footer and wraps it around the whole page.
+
 Deployment:
 This site was deployed using Vercel.
 
