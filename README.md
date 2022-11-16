@@ -23,6 +23,9 @@ This page includes a Form for sending messages to the owner of the site. It uses
 Layout:
 There's a layout file that includes the Navbar and the Footer and wraps it around the whole page.
 
+Enivronment Variables:
+If you wished to build this project on your machine locally, you need to provide some Enivronment Variables for SanityCMS and SendGrid API
+
 Deployment:
 This site was deployed using Vercel.
 
