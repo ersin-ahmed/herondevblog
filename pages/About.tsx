@@ -43,7 +43,7 @@ export default function About() {
 						about my abilities as a developer, please feel free to checkout my
 						portfolio site by clicking{' '}
 						<a
-							href='/'
+							href='https://www.ersinahmed.dev/'
 							target='_blank'
 							rel='noreferrer'
 							className='text-cyan-600 hover:underline hover:text-teal-400'
