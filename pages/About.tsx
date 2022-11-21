@@ -24,10 +24,10 @@ export default function About() {
 					height='150'
 				/>
 				<h1 className='text-2xl my-12 font-bold'>
-					Hello, My name is Ersin Ahmed.
+					Hello, My name is Ersin Ahmed
 				</h1>
 				<div>
-					<h2 className='text-2xl font-semibold mb-6'>Welcome to my Blog.</h2>
+					<h2 className='text-2xl font-semibold mb-6'>Welcome to my Blog</h2>
 					<hr className='max-w-lg my-5 mx-auto border border-teal-600' />
 					<p className='text-left text-teal-600 font-medium pb-2 px-8'>
 						About Me:
