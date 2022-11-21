@@ -15,13 +15,13 @@ export default function About() {
 				/>
 				<link rel='icon' href='/images/logo-white.png' />
 			</Head>
-			<div className='shadow-xl bg-cyan-50 border-teal-300 border-2 rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
+			<div className='shadow-xl bg-cyan-50 border-teal-300 border rounded-xl max-w-6xl mx-auto flex flex-col text-center justify-center items-center my-12 py-6 px-0 md:px-2'>
 				<Image
 					className='rounded-full'
 					src='/images/about.jpg'
 					alt='Author Ersin Ahmed'
-					width='200'
-					height='200'
+					width='150'
+					height='150'
 				/>
 				<h1 className='text-2xl my-12 font-bold'>
 					Hello, My name is Ersin Ahmed.
@@ -33,15 +33,15 @@ export default function About() {
 						About Me:
 					</p>
 					<p className='text-xl font-medium text-left px-12'>
-						I&apos;m a Software Developer from Burgas, Bulgaria. My technical
-						skills include: Web Development with Javascript and React. I&apos;ve
-						been teaching myself how to code since the year 2017. Despite
-						accumulating quite a bit of knowledge since then, I&apos;m fully
-						aware of the fact that in an ever-changing climate of Software
-						Development you must always keep learning and keep the same student
-						mentality no matter the expertise level! If you wish to learn more
-						about my abilities as a developer, please feel free to checkout my
-						portfolio site by clicking{' '}
+						I am a Web Developer from Burgas, Bulgaria. My technical skills
+						include: Web Development with Javascript and React. I&apos;ve been
+						coding since the year 2017 and my mission is to create beautifully
+						designed Front Ends with exceptional User Experiences and share them
+						with the world! At the end of the day the actual purpose of
+						Programming is to provide real world solutions to real world
+						problems. If you wish to learn more about my abilities as a
+						developer, please feel free to checkout my portfolio site by
+						clicking{' '}
 						<a
 							href='https://www.ersinahmed.dev/'
 							target='_blank'
