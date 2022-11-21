@@ -21,6 +21,11 @@ export default function Home({ posts }: Props) {
 					key='desc'
 				/>
 				<link rel='icon' href='/images/logo-white.png' />
+				<script
+					async
+					src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9115882332062777'
+					crossOrigin='anonymous'
+				></script>
 			</Head>
 
 			<div className='max-w-6xl mx-auto'>
