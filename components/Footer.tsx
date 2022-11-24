@@ -6,7 +6,7 @@ export default function Footer() {
 			<span className='text-sm text-white sm:text-center'>
 				© 2022{' '}
 				<a
-					href='https://herondevblog-cpkb.vercel.app/'
+					href='https://www.ersinahmed.dev/'
 					className='hover:opacity-50'
 					target='_blank'
 					rel='noreferrer'
