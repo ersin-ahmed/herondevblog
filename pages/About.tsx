@@ -34,13 +34,12 @@ export default function About() {
 					</p>
 					<p className='text-xl font-medium text-left px-12'>
 						I am a Web Developer from Burgas, Bulgaria. My technical skills
-						include: Web Development with Javascript and React. I&apos;ve been
-						coding since the year 2017 and my mission is to create beautifully
-						designed Front Ends with exceptional User Experiences and share them
-						with the world! At the end of the day the actual purpose of
-						Programming is to provide real world solutions to real world
-						problems. If you wish to learn more about my abilities as a
-						developer, please feel free to checkout my portfolio site by
+						include: Web Development with Javascript and React. My passion is to
+						create beautifully designed Front Ends with exceptional User
+						Experiences and share them with the world! At the end of the day the
+						actual purpose of Programming is to provide real world solutions to
+						real world problems. If you wish to learn more about my abilities as
+						a developer, please feel free to checkout my portfolio site by
 						clicking{' '}
 						<a
 							href='https://www.ersinahmed.dev/'
